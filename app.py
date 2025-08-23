@@ -41,5 +41,23 @@ def list_photos():
 def serve_photo(filename):
     return send_from_directory(UPLOAD_FOLDER, filename)
 
+@app.route("/")
+def index():
+    return """
+    <!doctype html>
+    <html lang="pl">
+      <head>
+        <meta charset="utf-8">
+        <title>Galeria kotków</title>
+      </head>
+      <body>
+        <h1>🐱 API Galerii kotków działa!</h1>
+        <p>Użyj <code>/upload</code> aby wrzucać zdjęcia (POST)</p>
+        <p>Odwiedź <code>/photos</code> aby zobaczyć listę zdjęć</p>
+        <p>Odwiedź <code>/kotki/&lt;nazwa_pliku&gt;</code> aby pobrać zdjęcie</p>
+      </body>
+    </html>
+    """
+
 if __name__ == "__main__":
     app.run(host="0.0.0.0", port=5000, debug=True)
