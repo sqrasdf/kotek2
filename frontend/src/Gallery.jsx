@@ -5,7 +5,8 @@ export default function Gallery() {
   const [files, setFiles] = useState([]);
 
   // Podmień na IP swojego laptopa w sieci
-  const API_URL = "http://192.168.0.101:5000";
+  //   const API_URL = "http://192.168.0.101:5000"; // moj router
+  const API_URL = "http://192.168.1.11:5000"; // router tomka
 
   const fetchPhotos = () => {
     fetch(`${API_URL}/photos`)
