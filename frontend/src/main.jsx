@@ -4,11 +4,13 @@ import { createRoot } from "react-dom/client";
 import App from "./App.jsx";
 import Gallery from "./Gallery.jsx";
 import Index from "./Index.jsx";
+import InfinityScrollIndex from "./InfinityScrollIndex.jsx";
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
     {/* <App /> */}
     {/* <Gallery /> */}
-    <Index />
+    {/* <Index /> */}
+    <InfinityScrollIndex />
   </StrictMode>
 );
